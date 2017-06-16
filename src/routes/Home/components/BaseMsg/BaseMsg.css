@@ -1,0 +1,73 @@
+.baseMsg {
+    border-width: 0px;
+    /*width: 479px;*/
+    width: 40%;
+    height: 341px;
+    font-family: '微软雅黑';
+    font-size: 16px;
+    color: #666666;
+    background-color: #fff;
+}
+
+.title {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 10px;
+    background-color: #ddd;
+}
+
+.title a {
+    float: right;
+    margin-right: 50px;
+}
+
+.container {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.companyName,
+.objectNum,
+.balance {
+    height: 80px;
+    line-height: 80px;
+}
+
+.companyName span:nth-child(1),
+.objectNum span:nth-child(1),
+.balance span:nth-child(1) {
+    font-size: 16px;
+}
+
+.companyName span:nth-child(2),
+.objectNum span:nth-child(2),
+.balance span:nth-child(2) {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+/*.auth {
+    display: inline-block;
+    height: 20px;
+    width: 50px;
+    background-color: green;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    top: 30px;
+}
+
+.auth span {
+    color:#fff;
+}*/
+
+.balance a {
+    text-decoration: underline;
+}
+
+
+
+

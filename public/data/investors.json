@@ -1,0 +1,48 @@
+{
+    "rows": {
+        "listWarning": [
+            {
+                "id": 1,
+                "name":"role",
+                "number": 1,
+                "money": 11,
+                "currentValue": 111,
+                "chg": 0.1
+            },
+            {
+                "id": 2,
+                "name":"Jimmy",
+                "number": 2,
+                "money": 22,
+                "currentValue": 222,
+                "chg": 0.2
+            }
+        ],
+        "listPay": [
+            {
+                "id": 1,
+                "orderNo": "0001",
+                "invoiceNo": "0001",
+                "contractNo": "0101",
+                "payment": "Kery",
+                "receive": "Jeny",
+                "totalPay": 10000,
+                "amount": 100,
+                "unamount": 1000,
+                "amountType": "货款"
+            },
+            {
+                "id": 2,
+                "orderNo": "0002",
+                "invoiceNo": "0002",
+                "contractNo": "0202",
+                "payment": "Kery",
+                "receive": "Jeny",
+                "totalPay": 20000,
+                "amount": 200,
+                "unamount": 2000,
+                "amountType": "收款"
+            }
+        ]
+    }
+}

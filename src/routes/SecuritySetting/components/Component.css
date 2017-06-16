@@ -1,0 +1,19 @@
+/*.ant-advanced-search-form {
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}*/
+.progress {
+  height: 100px;
+  margin-top: 20px;
+}
+.progress span {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.progress progress {
+  color: orange;
+  height: 15px;
+}

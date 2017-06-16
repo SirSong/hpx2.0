@@ -1,0 +1,30 @@
+.mobileBefore {
+  width: 60px !important;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.ant-upload-select-picture-card i {
+  font-size: 28px;
+  color: #999;
+}
+
+.goAdd {
+  display: inline-block;
+  width: 115px;
+  height: 40px;
+  background-color: rgba(22, 155, 213, 1);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 40px;
+}
+
+.goAdd:hover {
+  color: #dddddd;  
+}

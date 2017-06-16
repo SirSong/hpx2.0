@@ -1,0 +1,62 @@
+.com-info-table table{
+    border-collapse:collapse;
+    width:100%;
+}
+.com-info-table table tr td{
+    height:40px;
+    line-height:40px;
+    border : 1px solid #666
+}
+.com-info-table table tr td:first-child,
+.com-info-table table tr td:nth-child(3){
+    width:20%;
+}
+.com-info-table table tr td:last-child,
+.com-info-table table tr td:nth-child(2){
+    width:30%;
+}
+.formInline ul{
+    width:100%;
+    overflow:hidden;
+    border:1px solid #ccc;
+    border-bottom : none;
+}
+
+.formInline li{
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+    float:left;
+    height:32px;
+    line-height:32px;
+    width:50%;
+}
+.formInline li:nth-child(even){
+    border-right:none;
+}
+.formInline label{
+    margin-bottom:0;
+}
+.formInline input,.formInline .ant-select{
+    border:none;
+    border-left:1px solid #ccc;
+    height:30px;
+    line-height:30px;
+    width:60%;
+}
+.formInline .ant-form-explain{
+    position: absolute;
+    top:0;
+    right:10px;
+    line-height:32px;
+}
+/*.formInline .ant-form-item{
+    width:50%;
+    margin-right:0;
+    border:1px solid #ccc
+}
+.formInline .ant-form-item-label{
+    width:20%;
+}
+.formInline label{
+    margin-bottom:0;
+}*/

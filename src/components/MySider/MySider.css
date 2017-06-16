@@ -1,0 +1,13 @@
+.sideFooter{
+    /*border: 1px solid #000;*/
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    text-align: center;
+}
+
+.sideFooter a{
+    display: block;
+    color: #444;
+    font-size: 12px;
+}

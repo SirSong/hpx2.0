@@ -1,0 +1,33 @@
+.types-project{
+    background:#fff;
+    width:760px;
+    margin-top:10px;
+}
+
+.types-project h4{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    background:#ddd;
+}
+
+.types-project ul{
+    overflow: hidden;
+    padding:30px 30px;   
+}
+
+.types-project ul li{
+    float: left;
+    margin:10px 15px;
+}
+
+.types-project ul a{
+    display:block;
+    width:200px;
+    height:40px;
+    background:lightblue;
+    color:#fff;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+}

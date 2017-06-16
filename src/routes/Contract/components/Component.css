@@ -1,0 +1,26 @@
+/*.ant-advanced-search-form {
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}*/
+/*
+th,
+td {
+  border: none !important;
+}*/
+
+
+th,
+td
+{
+  border: 1px solid #666 !important;
+  border-width:0px 1px 1px 0px !important;
+  height: 20px !important;
+}
+
+.contractTable{
+  border:solid #666;
+  border-width:1px 0px 0px 1px;
+  margin-bottom: 30px;
+}

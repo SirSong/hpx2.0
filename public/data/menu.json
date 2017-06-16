@@ -1,0 +1,91 @@
+[ 
+      {
+        "name":"主页",
+        "icon": "user",
+        "link":"/",
+        "permissionsId":"menu1"
+      },
+      {
+        "name":"业务管理",
+        "icon": "caret-down",
+        "permissionsId":"menu2",
+        "vRolePermissionCustom":[
+         {
+            "name":"我的合同（供）",
+            "link": "/SupplierContract"
+          },
+          {
+            "name":"我的合同（需）",
+            "link": "/DemanderContract"
+          },
+          {
+            "name":"采购合同",
+            "link": "/PurchaseContract"
+          },
+          {
+            "name":"销售合同",
+            "link": "/SalesContract"
+          }
+        ]
+      },
+      {
+        "name":"售后管理",
+        "icon": "caret-down",
+        "permissionsId":"menu3",
+        "vRolePermissionCustom":[
+          {
+            "name":"退款管理",
+            "link": "/AfterSale/T"
+          },
+          {
+            "name":"补发管理",
+            "link": "/AfterSale/F"
+          },
+          {
+            "name":"补购管理",
+            "link": "/AfterSale/G"
+          }
+        ]
+      },
+      {
+        "name":"货品清单",
+        "icon": "caret-down",
+        "permissionsId":"menu4",
+        "vRolePermissionCustom":[
+          {
+            "name":"货品清单",
+            "link": "/GoodsMaintenance"
+          }
+        ]
+      },
+      {
+        "name":"资金管理",
+        "icon": "caret-down",
+        "permissionsId":"menu5",
+        "vRolePermissionCustom":[
+          {
+            "name":"待付款",
+            "link": "/payment/no-pay"
+          },
+          {
+            "name":"待收款",
+            "link": "/payment/receive"
+          },
+          {
+            "name":"历史付款",
+            "link": "/payment/historyPay"
+          },
+          {
+            "name":"历史收款",
+            "link": "/payment/historyReceive"
+          }
+        ]
+      },
+      {
+        "name":"我的用户",
+        "icon": "caret-down",
+        "permissionsId":"menu6",
+        "link": "/"
+      }
+    ]
+  

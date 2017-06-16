@@ -1,0 +1,38 @@
+.notice {
+    border-width: 0px;
+    /*width: 379px;*/
+    width: 29%;
+    height: 341px;
+    font-family: '微软雅黑';
+    font-size: 16px;
+    color: #666666;
+    background-color: #fff;
+    display: inline-block;
+    box-shadow: 1px 1px 1px #ccc;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.title {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 10px;
+    background-color: #ddd;
+}
+
+.title a {
+    float: right;
+    margin-right: 50px;
+}
+
+.container {
+    padding: 30px 10px; 
+    width: 100%;
+}
+
+.container li {
+    height: 40px;
+    line-height: 40px;
+}

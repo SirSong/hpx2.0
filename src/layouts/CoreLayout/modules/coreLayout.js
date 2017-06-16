@@ -1,0 +1,42 @@
+// ------------------------------------
+// Constants
+// ------------------------------------
+export const TEST = 'TEST'
+
+// ------------------------------------
+// Actions
+// ------------------------------------
+
+/*  This is a thunk, meaning it is a function that immediately
+    returns a function for lazy evaluation. It is incredibly useful for
+    creating async actions, especially when combined with redux-thunk! */
+
+export const test = () => {
+  return (dispatch, getState) => {
+    dispatch({
+      type    : TEST,
+      payload : getState().counter
+    })
+  }
+}
+
+export const actions = {
+  test
+}
+
+// ------------------------------------
+// Action Handlers
+// ------------------------------------
+const ACTION_HANDLERS = {
+  [TEST]    : (state, action) =>  action.payload,
+}
+
+// ------------------------------------
+// Reducer
+// ------------------------------------
+const initialState = 0
+export default function counterReducer (state = initialState, action) {
+  const handler = ACTION_HANDLERS[action.type]
+
+  return handler ? handler(state, action) : state
+}

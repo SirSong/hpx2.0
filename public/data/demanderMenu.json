@@ -1,0 +1,73 @@
+{
+    "data": [ 
+      {
+        "title":"主页",
+        "icon": "user"
+      },
+      {
+        "title":"业务管理",
+        "icon": "caret-down",
+        "children":[
+         {
+            "title":"我的订单",
+            "route": "/order"
+          },
+          {
+            "title":"我的合同",
+            "route": "/contract"
+          },
+          {
+            "title":"我的提货单",
+            "route": "/deliveryNote"
+          }
+        ]
+      },
+      {
+        "title":"风控预警",
+        "icon": "caret-down",
+        "children":[
+         {
+            "title":"风控预警",
+            "route": "/warning"
+          }
+        ]
+      },
+      {
+        "title":"货品清单",
+        "icon": "caret-down",
+        "children":[
+         {
+            "title":"货品清单",
+            "route": "/goodsMaintenance"
+          }
+        ]
+      },
+      {
+        "title":"资金管理",
+        "icon": "caret-down",
+        "children":[
+          {
+            "title":"待付款",
+            "route": "/payment"
+          },
+          {
+            "title":"待收款",
+            "route": "/receive"
+          },
+          {
+            "title":"历史付款",
+            "route": "/historyPay"
+          },
+          {
+            "title":"历史收款",
+            "route": "/historyReceive"
+          }
+        ]
+      },
+      {
+        "title":"我的用户",
+        "icon": "caret-down",
+        "route": "/"
+      }
+    ]
+  }

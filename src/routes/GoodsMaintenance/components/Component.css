@@ -1,0 +1,17 @@
+/*.ant-advanced-search-form {
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}*/
+th,
+td
+{
+  border:none !important;
+}
+
+/*.goodsTable{
+  border:solid #666;
+  border-width:1px 0px 0px 1px;
+  margin-bottom: 30px;
+}*/

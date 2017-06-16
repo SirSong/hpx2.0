@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器兼容提示页面</title>
+    <style type="text/css">
+
+        .fl {
+            float: left;
+        }
+        .container{
+            width:100%;
+            height:80%;
+            text-align:center;
+        }
+        .first{
+            margin:5% auto;
+            width:100%;
+            height:80%;
+            background:#FFFFFF;
+        }
+        .first p{
+            font-size:18px;
+            color:red;
+
+        }
+
+        .first span{
+            font-weight:700;
+        }
+        .browserlist{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            list-style:none;
+
+        }
+        .browserlist li{
+            width:18%;
+            height:20%;
+            float:left;
+            margin:2% 3%;
+            font-size:20px;
+        }
+        .browserlist a{
+            color:#3366FF;
+            text-decoration:none;
+            font-weight:600;
+        }
+        .second{
+            width:50%;
+            height:45%;
+            margin:5% auto;
+
+        }
+        .second img{
+            width:18%;
+            height:60%;
+            margin:0 3%;
+            float:left;
+            border:0;
+        }
+        #copyright {
+            background: #fff;
+        }
+        .footer {
+            background-color: #ededed;
+            border-top: 1px solid #d3d3d3;
+            height: 120px;
+            min-width: 1200px;
+        }
+        .pt15 {
+            padding-top: 15px;
+        }
+        .copyright, .number {
+            color: #98a4ab;
+            font-size: 14px;
+            height: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="first">
+        <p>检测您正在使用低版本的IE浏览器</p>
+        <p>为保证最佳体验请使用<span>IE11及以上版本IE浏览器</span>或者下载以下浏览器：</p>
+        <div class="second">
+            <a 
+                href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"
+                target="_blank"> 
+                <img src="http://7xipob.com1.z0.glb.clouddn.com/ie.jpg">
+            </a>
+            <a 
+                href="http://www.google.cn/intl/zh-CN/chrome/browser/" 
+                target="_blank">
+                <img src="http://7xipob.com1.z0.glb.clouddn.com/chrome.jpeg">
+            </a>
+            <a 
+                href="http://www.firefox.com.cn/" 
+                target="_blank">
+                <img src="http://7xipob.com1.z0.glb.clouddn.com/e7dd3413-16f5-4c2e-a6c2-418f2ea9f8e7.jpeg">
+            </a>
+            <a 
+                href="https://support.apple.com/zh-cn/safari" 
+                target="_blank">
+                <img src="http://7xipob.com1.z0.glb.clouddn.com/safari.jpg">
+            </a>
+            <div style="clear:both"></div>
+
+            <ul class="browserlist">
+                <li>
+                    <a 
+                        class="ie" 
+                        href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" 
+                        target="_blank">
+                        IE11+
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        class="chrome" 
+                        href="http://www.google.cn/intl/zh-CN/chrome/browser/" 
+                        target="_blank">
+                        Chrome37+
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        class="firefox" 
+                        href="http://www.firefox.com.cn/" 
+                        target="_blank">FireFox32+
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        class="safari" 
+                        href="https://support.apple.com/zh-cn/safari" 
+                        target="_blank">
+                        Safari7.1+
+                    </a>
+                </li>
+            </ul>
+            <div style="clear:both"></div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

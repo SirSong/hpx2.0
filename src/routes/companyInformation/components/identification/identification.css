@@ -1,0 +1,12 @@
+.process-time{
+    position: absolute;
+    width: 110px;
+    left: -130px;
+    text-align: right;
+}
+.ant-timeline{
+    display: inline-block;
+}
+.ant-timeline-item{
+    left:180px;
+}

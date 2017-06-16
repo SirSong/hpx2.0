@@ -1,0 +1,33 @@
+.mobileBefore {
+  width: 60px !important;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+th,
+td
+{
+  border: 1px solid #666 !important;
+  border-width:0px 1px 1px 0px !important;
+  height: 20px !important;
+}
+
+.warningTable{
+  border:solid #666;
+  border-width:1px 0px 0px 1px;
+  margin-bottom: 30px;
+}
+
+.graphic {
+  position: relative;
+}
+.payOrder {
+  position: absolute;
+  top: 50px;
+  right: 200px;
+}
+
