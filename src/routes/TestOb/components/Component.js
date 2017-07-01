@@ -1,9 +1,10 @@
 import React from 'react'
 import { IndexLink, Link, withRouter, browserHistory } from 'react-router'
 import { Button, Table, Icon, Popconfirm, message } from 'antd'
+// import { TextEditableCell } from '../../../components/EditableCell'
 import { getMoment, precisionFormat } from '../../../core/util'
 import './Component.css';
-
+import  TextEditable  from '../../../components/EditTable/TextEditTable'
 import moment from 'moment'
 import Search from './Search';
 const dateFormat = 'YYYY/MM/DD';
@@ -11,6 +12,43 @@ const dateFormat = 'YYYY/MM/DD';
 class Compo extends React.Component {
   constructor(props) {
     super(props);
+
+    this.columns2=[{
+        key: 'name',
+        title: '名字',
+        dataIndex: 'name',
+      },{
+        key: 'age',
+        title: '数字',
+        dataIndex: 'age',
+      },{
+        key: 'type',
+        title: '类型',
+        dataIndex: 'type',
+      }
+      ];
+
+    this.dataSource2 = [
+      // {
+      //   id : 0,
+      //   name : 's1',
+      //   age : 22,
+      //   type : 'TEST1'
+      // },
+      // {
+      //   id : 1,
+      //   name : 's2',
+      //   age : 23,
+      //   type : 'TEST2'
+      // },
+      // {
+      //   id : 2,
+      //   name : 's3',
+      //   age : 24,
+      //   type : 'TEST3'
+      // }
+    ]
+
     this.state = {
       selectedRowKeys: [],  // Check here to configure the default column
     };
@@ -22,63 +60,66 @@ class Compo extends React.Component {
         key: 'accuracy',
         title: '数字',
         dataIndex: 'accuracy',
-        render: (text) => <span>{precisionFormat(2,text)}333</span>
-      },{
-        key: 'datePicker',
-        title: '日期',
-        dataIndex: 'datePicker',
-        render: (text) => <span>{moment(text).format('YYYY-MM-DD')}</span>
-      },{
-        key: 'selectorcountry',
-        title: '国家',
-        dataIndex: 'selectorcountry',
-        render: (text, record) => 
-          <span>{
-            [{"value":"china","name":"中国"},{"value":"usa","name":"美国"}]
-              .filter((v)=> v.value == text).map((v)=>v.name) || ''
-          }</span>
-      },{
-        key: 'uploadimg',
-        title: '图片',
-        dataIndex: 'uploadimg',
-        render: (text, record) => 
-          <span>
-            {text ? text.map(
-              (v, i) => (
-                <a key={i} target="_blank" href={v.url}>
-                  <img src={v.url} style={{ width: '32px', height: '32px' }} />
-                </a>
-              )
-            ) : null}
-          </span>
-      },{
-        key: 'uploadview',
-        title: '文件',
-        dataIndex: 'uploadview',
-        render: (text, record) => 
-          <span>
-            {text ? text.map(
-              (v, i) => (
-                <a key={i} target="_blank" href={v.url}>{v.name}</a>
-              )
-            ) : null}
-          </span>
-      },{
-        title: '操作',
-        key: 'action',
-        render: (text, record) => (
-          <span>
-            <Link to={`${this.getUrlQueryParams()}/detail/${record.id}`}>
-              修改
-            </Link>
+        // render: (text) => <span>{precisionFormat(2,text)}333</span>
+      },
+      // {
+      //   key: 'datePicker',
+      //   title: '日期',
+      //   dataIndex: 'datePicker',
+      //   // render: (text) => <span>{moment(text).format('YYYY-MM-DD')}</span>
+      // },{
+      //   key: 'selectorcountry',
+      //   title: '国家',
+      //   dataIndex: 'selectorcountry',
+      //   // render: (text, record) => 
+      //   //   <span>{
+      //   //     [{"value":"china","name":"中国"},{"value":"usa","name":"美国"}]
+      //   //       .filter((v)=> v.value == text).map((v)=>v.name) || ''
+      //   //   }</span>
+      // },{
+      //   key: 'uploadimg',
+      //   title: '图片',
+      //   dataIndex: 'uploadimg',
+      //   // render: (text, record) => 
+      //   //   <span>
+      //   //     {text ? text.map(
+      //   //       (v, i) => (
+      //   //         <a key={i} target="_blank" href={v.url}>
+      //   //           <img src={v.url} style={{ width: '32px', height: '32px' }} />
+      //   //         </a>
+      //   //       )
+      //   //     ) : null}
+      //   //   </span>
+      // },{
+      //   key: 'uploadview',
+      //   title: '文件',
+      //   dataIndex: 'uploadview',
+      //   // render: (text, record) => 
+      //   //   <span>
+      //   //     {text ? text.map(
+      //   //       (v, i) => (
+      //   //         <a key={i} target="_blank" href={v.url}>{v.name}</a>
+      //   //       )
+      //   //     ) : null}
+      //   //   </span>
+      // },
+      // {
+      //   title: '操作',
+      //   key: 'action',
+      //   render: (text, record) => (
+      //     <span>
+      //       <Link to={`${this.getUrlQueryParams()}/detail/${record.id}`}>
+      //         修改
+      //       </Link>
             
-            <span className="ant-divider" />
-            <Popconfirm title="确定删除?" onConfirm={() => this.props.del(record.id)}>
-              <a href="#">删除</a>
-            </Popconfirm>
-          </span>
-        ),
-      }];
+      //       <span className="ant-divider" />
+      //       <Popconfirm title="确定删除?" onConfirm={() => this.props.del(record.id)}>
+      //         <a href="#">删除</a>
+      //       </Popconfirm>
+      //     </span>
+      //   ),
+      // }
+      ];
   }
   componentWillMount() {
     try {
@@ -179,9 +220,10 @@ class Compo extends React.Component {
     return '/testOb/' + encodeURI(JSON.stringify(v || {}));
   }
 
-  // handleClick() {
 
-  // }
+  testData(data){
+    console.log('获取这些',data)
+  }
 
   render() {
     const { selectedRowKeys } = this.state;
@@ -210,7 +252,6 @@ class Compo extends React.Component {
           onChange={this.props.updateQueryParams.bind(this)}
           clear={this.props.clearQueryParams}
           loading={listStatus.loading}
-          xxMenu={this.props.xxMenu}
         />
         <Link 
           to={`${this.getUrlQueryParams()}/detail`} 
@@ -225,7 +266,7 @@ class Compo extends React.Component {
           <Button type="primary" disabled={this.state.selectedRowKeys.length !== 1}>22222</Button>
         </Link>
         <Link 
-          /*to={`${this.getUrlQueryParams()}/detail`} */
+          to={`${this.getUrlQueryParams()}/detail`}
           style={{ marginRight: '16px' }}
         >
         </Link>
@@ -242,6 +283,19 @@ class Compo extends React.Component {
         loading={listStatus.loading}
         onChange={this.handleTableChange.bind(this)}
       />
+
+      <TextEditable
+        rowKey='id'
+        columns={this.columns}
+        dataSource={this.dataSource2}
+        actions={{
+          add : true,
+          delete : true,
+        }}  
+        getData = {(value)=>this.testData(value)}
+      />
+
+      
     </div>;
     //默认child全部替换父路由视图，也可以只替换部分视图，即嵌套，或者弹出子路由对应的视图
     if (this.props.children) {

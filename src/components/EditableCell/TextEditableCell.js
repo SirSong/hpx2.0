@@ -48,6 +48,7 @@ class TextEditableCell extends React.Component {
   handleChange(e) {
     const value = e.target.value;
     this.setState({ value });
+    this.props.onChange(value)
   }
   render() {
     const { value, editable } = this.state;

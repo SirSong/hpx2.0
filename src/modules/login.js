@@ -39,70 +39,70 @@ export const constants = {
     returns a function for lazy evaluation. It is incredibly useful for
     creating async actions, especially when combined with redux-thunk! */
 
-// export  const signIn =  (formData) => {
-//   return async (dispatch, getState) => {
-//     dispatch({
-//       type    : SIGN_IN_REQUEST,
-//       payload : {...formData}
-//     })
-//     const resp = await formPostReq(
-//       __PROXY__+'/trade/user/login', 
-//       {
-//           username: formData.userName,
-//           password: formData.password,
-//       }
-//     )
-//     const result = await resp.json();
-//     console.log(1,result)
-//     if(result.success){
-//       localStorage['token'] = result.data.token;
-//       dispatch({
-//         type    : SIGN_IN_SUCCESS,
-//         payload : ''
-//       })
-//     }else {
-//       dispatch({
-//         type    : SIGN_IN_FAILURE,
-//         payload : {
-//           ...formData,
-//           signInErr : '用户名或密码错误'
-//         }
-//       })
-//     }
-//   }
-// }
-
 export  const signIn =  (formData) => {
   return async (dispatch, getState) => {
     dispatch({
-      type: SIGN_IN_REQUEST,
-      payload: { ...formData }
+      type    : SIGN_IN_REQUEST,
+      payload : {...formData}
     })
-    try{
-      const resp = await formPostReq(
-        '/core'+'/api/v1/login', 
-        {
-            username: formData.userName,
-            password: formData.password,
-        }
-      )
-      const result = await resp.json();
-      console.log(result)
+    const resp = await formPostReq(
+      __PROXY__+'/trade/user/login', 
+      {
+          username: formData.userName,
+          password: formData.password,
+      }
+    )
+    const result = await resp.json();
+    console.log(1,result)
+    if(result.success){
+      localStorage['token'] = result.data.token;
       dispatch({
         type    : SIGN_IN_SUCCESS,
-        payload : result
+        payload : ''
       })
-    }catch(e){
+    }else {
       dispatch({
-        type: SIGN_IN_FAILURE,
-        payload: {
+        type    : SIGN_IN_FAILURE,
+        payload : {
           ...formData,
-          signInErr: '用户名或密码错误'
+          signInErr : '用户名或密码错误'
         }
       })
     }
   }
 }
+
+// export  const signIn =  (formData) => {
+//   return async (dispatch, getState) => {
+//     dispatch({
+//       type: SIGN_IN_REQUEST,
+//       payload: { ...formData }
+//     })
+//     try{
+//       const resp = await formPostReq(
+//         '/core'+'/api/v1/login', 
+//         {
+//             username: formData.userName,
+//             password: formData.password,
+//         }
+//       )
+//       const result = await resp.json();
+//       console.log(result)
+//       dispatch({
+//         type    : SIGN_IN_SUCCESS,
+//         payload : result
+//       })
+//     }catch(e){
+//       dispatch({
+//         type: SIGN_IN_FAILURE,
+//         payload: {
+//           ...formData,
+//           signInErr: '用户名或密码错误'
+//         }
+//       })
+//     }
+//   }
+// }
 
 
 export const logOut = () => {
@@ -143,54 +143,54 @@ export const clearSignInErr = () => ({
 
 //判断用户是否登陆
 
-// export async function isLogin (store){
-//   // const resp = await formPostReq(
-//   //   __PROXY__+'/trade/user/isLogin',
-//   //   {},
-//   // )
-//   // const result = await resp.json();
-//   // console.log(result)
-//   // if(result.success){
-//   //   if(result.data.isLogin == 'YES'){//用户登录成功
-//   //     store.dispatch({
-//   //       type:SIGN_IN_SUCCESS,
-//   //     })
-//   //     return true;
-//   //   }
-//   // }else{//用户未验证，返回登陆页面
-//   //   store.dispatch({
-//   //     type:SIGN_IN_NOT,
-//   //   })
-//   //   return false;
-//   // }
-//   store.dispatch({
-//     type:SIGN_IN_SUCCESS,
-//   })
-//   return true
-// }
-
-
 export async function isLogin (store){
-  try{
-    const resp = await getReq(
-      '/core'+'/api/v1/login',
-      {},
-    )
-    const result = await resp.json();
-    if(resp.ok){
-      store.dispatch({
-        type:SIGN_IN_SUCCESS,
-        payload:result
-      })
-    }
-    return true
-  }catch(e){
-    store.dispatch({
-      type:SIGN_IN_NOT,
-    })
-    return false;
-  }
+  // const resp = await formPostReq(
+  //   __PROXY__+'/trade/user/isLogin',
+  //   {},
+  // )
+  // const result = await resp.json();
+  // console.log(result)
+  // if(result.success){
+  //   if(result.data.isLogin == 'YES'){//用户登录成功
+  //     store.dispatch({
+  //       type:SIGN_IN_SUCCESS,
+  //     })
+  //     return true;
+  //   }
+  // }else{//用户未验证，返回登陆页面
+  //   store.dispatch({
+  //     type:SIGN_IN_NOT,
+  //   })
+  //   return false;
+  // }
+  store.dispatch({
+    type:SIGN_IN_SUCCESS,
+  })
+  return true
 }
+
+
+// export async function isLogin (store){
+//   try{
+//     const resp = await getReq(
+//       '/core'+'/api/v1/login',
+//       {},
+//     )
+//     const result = await resp.json();
+//     if(resp.ok){
+//       store.dispatch({
+//         type:SIGN_IN_SUCCESS,
+//         payload:result
+//       })
+//     }
+//     return true
+//   }catch(e){
+//     store.dispatch({
+//       type:SIGN_IN_NOT,
+//     })
+//     return false;
+//   }
+// }
 
 export const actions = {
   signIn,

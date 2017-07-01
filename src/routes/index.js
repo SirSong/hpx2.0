@@ -35,6 +35,7 @@ export const createRoutes = (store) => ({
         require('./DemanderContract').default(store),
         require('./SalesContract').default(store),
         require('./FinancialManagement').default(store),
+        require('./test2').default(store),
       ];
       cb(
         null, 

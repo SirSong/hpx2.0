@@ -137,6 +137,7 @@ class DetailForm extends React.Component {
     });
   }
   render() {
+    console.log(this.props,'9901414')
     const { previewVisible, previewImage } = this.state;
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
